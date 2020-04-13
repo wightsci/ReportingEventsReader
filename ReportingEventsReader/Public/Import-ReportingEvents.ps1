@@ -1,3 +1,4 @@
+Function Import-ReportingEvents {
 [CmdletBinding()]
 Param(
 [String]$EventsPath="$env:WinDir\SoftwareDistribution\ReportingEvents.log"    
@@ -39,3 +40,4 @@ Select-Object "EventInstanceID",
 "Action",
 "Message",
 "MessageID"
+}
