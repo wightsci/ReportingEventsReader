@@ -1,6 +1,6 @@
 [CmdletBinding()]
 Param(
-[String]$EventsPath="$env:Windir\SoftwareDistribution\ReportingEvents.log"    
+[String]$EventsPath="$env:WinDir\SoftwareDistribution\ReportingEvents.log"    
 )
 $header = "EventInstanceID",
 "TimeAtTarget",
