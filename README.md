@@ -1,3 +1,3 @@
 # ReportingEventsReader
 
-Read the ReportingEVents log file on Windows computer.
+Read the ReportingEvents log file on Windows computer.
