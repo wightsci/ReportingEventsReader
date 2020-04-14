@@ -24,3 +24,23 @@ Describe "General project validation: $moduleName" {
         {Import-Module (Join-Path $moduleRoot "$moduleName.psm1") -force } | Should Not Throw
     }
 }
+
+Describe "PS Script Analyzer: $modulename" {
+    
+    Import-Module PSScriptAnalyzer
+    It "Module should pass PSScriptAnalyzer with 0 violations" {
+        (Invoke-ScriptAnalyzer -Path .\ReportingEventsReader -Recurse).Count | Should Be 0
+    }
+}
+
+Describe "Online Help files should exist" {
+
+    It "about_$modulename.help.txt file should exist" {
+        "$modulename\en-US\about_$modulename.help.txt" | Should exist
+    }
+
+    It "$modulename-help.xml file should exist" {
+        "$modulename\en-US\$modulename-help.xml" | Should exist
+    }
+
+}

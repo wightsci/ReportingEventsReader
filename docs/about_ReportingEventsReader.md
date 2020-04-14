@@ -1,5 +1,5 @@
-# ReportingEvents
-## about_ReportingEvents
+# ReportingEventsReader
+## about_ReportingEventsReader
 
 ```
 ABOUT TOPIC NOTE:

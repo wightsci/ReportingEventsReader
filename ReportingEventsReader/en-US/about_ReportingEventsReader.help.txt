@@ -1,5 +1,5 @@
 ﻿TOPIC
-    about_reportingevents
+    about_reportingeventsreader
 
     ABOUT TOPIC NOTE:
     The first header of the about topic should be the topic name.
