@@ -10,12 +10,14 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+- powershell: Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+  displayName: Update PSScriptAnalyzer
 - powershell: Install-Module Pester -Force -Scope CurrentUser
   displayName: Update Pester
   name: prepStep
   workingDirectory: $(build.sourcesDirectory)
   failOnStderr: 'true'
-- powershell: Invoke-Pester
+- powershell: Invoke-Pester -EnableExit
   displayName: Pester Tests
   name: firstStep
   workingDirectory: $(build.sourcesDirectory)
