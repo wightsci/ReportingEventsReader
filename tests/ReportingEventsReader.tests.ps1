@@ -29,7 +29,7 @@ Describe "PS Script Analyzer: $modulename" {
     
     Import-Module PSScriptAnalyzer
     It "Module should pass PSScriptAnalyzer with 0 violations" {
-        (Invoke-ScriptAnalyzer -Path .\ReportingEventsReader -Recurse).Count | Should Be 0
+        (Invoke-ScriptAnalyzer -Path .\ReportingEventsReader -Recurse -ExcludeRule PSUseSingularNouns).Count | Should Be 0
     }
 }
 
