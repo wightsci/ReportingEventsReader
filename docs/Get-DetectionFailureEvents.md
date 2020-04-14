@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-DetectionFailureEvents
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Returns failed Detection events (event ID 148) from a ReportingEvents 
+collection.
 
 ## SYNTAX
 
@@ -17,21 +18,25 @@ Get-DetectionFailureEvents [-ReportingEvents] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Returns failed Detection events (event ID 148) from a ReportingEvents 
+collection.
+
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReportingEvents = Import-ReportingEvents
+PS C:\> Get-DetectionFailureEvents -ReportingEvents $ReportingEvents
 ```
 
-{{ Add example description here }}
+In this example the ReportingEvents.log file is imported, then the failed 
+Detection events are returned.
 
 ## PARAMETERS
 
 ### -ReportingEvents
-{{ Fill ReportingEvents Description }}
+A collection of ReportingEvents.
 
 ```yaml
 Type: Object

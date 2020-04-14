@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-DownloadEvents
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Returns successful Download events from a ReportingEvents collection.
 
 ## SYNTAX
 
@@ -17,21 +17,24 @@ Get-DownloadEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Returns successful Detection events (event ID 167) from a ReportingEvents 
+collection.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReportingEvents = Import-ReportingEvents
+PS C:\> Get-DownloadEvents -ReportingEvents $ReportingEvents
 ```
 
-{{ Add example description here }}
+In this example the ReportingEvents.log file is imported, then the successful 
+Download events are returned.
 
 ## PARAMETERS
 
 ### -ReportingEvents
-{{ Fill ReportingEvents Description }}
+A collection of ReportingEvents.
 
 ```yaml
 Type: Object

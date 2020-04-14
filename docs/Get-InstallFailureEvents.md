@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-InstallFailureEvents
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Returns failed Install events from a ReportingEvents 
+collection.
 
 ## SYNTAX
 
@@ -17,21 +18,23 @@ Get-InstallFailureEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Returns failed Install events (event IDs 182,195,198,203) from a ReportingEvents 
+collection.
 
 ## EXAMPLES
-
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReportingEvents = Import-ReportingEvents
+PS C:\> Get-InstallFailureEvents -ReportingEvents $ReportingEvents
 ```
 
-{{ Add example description here }}
+In this example the ReportingEvents.log file is imported, then the failed 
+Install events are returned.
 
 ## PARAMETERS
 
 ### -ReportingEvents
-{{ Fill ReportingEvents Description }}
+A collection of ReportingEvents.
 
 ```yaml
 Type: Object

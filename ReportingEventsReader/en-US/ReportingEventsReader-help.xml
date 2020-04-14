@@ -6,11 +6,11 @@
       <command:verb>Get</command:verb>
       <command:noun>DetectionEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns successful Detection events from a ReportingEvents collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns successful Detection events (event ID 147) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -18,7 +18,7 @@
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -33,7 +33,7 @@
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -71,9 +71,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-DetectionEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the successful  Detection events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -85,11 +86,11 @@
       <command:verb>Get</command:verb>
       <command:noun>DetectionFailureEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns failed Detection events (event ID 148) from a ReportingEvents  collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns failed Detection events (event ID 148) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -97,7 +98,7 @@
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -112,7 +113,7 @@
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -150,9 +151,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-DetectionFailureEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the failed  Detection events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -164,11 +166,11 @@
       <command:verb>Get</command:verb>
       <command:noun>DownloadEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns successful Download events from a ReportingEvents collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns successful Detection events (event ID 167) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -176,7 +178,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -191,7 +193,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -229,9 +231,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-DownloadEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the successful  Download events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -243,11 +246,11 @@
       <command:verb>Get</command:verb>
       <command:noun>DownloadFailureEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns failed Download events from a ReportingEvents  collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns failed Detection events (event ID 1) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -255,7 +258,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -270,7 +273,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -308,9 +311,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-DownloadFailureEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the failed  Download events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -322,11 +326,11 @@
       <command:verb>Get</command:verb>
       <command:noun>InstallEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns successful Install events from a ReportingEvents  collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns successful Install events (event IDs 183,184,190,191,197,199) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -334,7 +338,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -349,7 +353,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -387,9 +391,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-InstallEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the successful  Install events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -401,11 +406,11 @@
       <command:verb>Get</command:verb>
       <command:noun>InstallFailureEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Returns failed Install events from a ReportingEvents  collection.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Returns failed Install events (event IDs 182,195,198,203) from a ReportingEvents  collection.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -413,7 +418,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+            <maml:para>A collection of ReportingEvents.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -428,7 +433,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill ReportingEvents Description }}</maml:para>
+          <maml:para>A collection of ReportingEvents.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -466,9 +471,10 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents
+PS C:\&gt; Get-InstallFailureEvents -ReportingEvents $ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents.log file is imported, then the failed  Install events are returned.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -480,11 +486,11 @@
       <command:verb>Import</command:verb>
       <command:noun>ReportingEvents</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Imports a ReportingEvents log file.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Imports a ReportingEvents log file.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -492,14 +498,14 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>EventsPath</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill EventsPath Description }}</maml:para>
+            <maml:para>The path to a ReportingEvents file. Defaults to  $env:windir\SoftwareDistribution\ReportingEvents.log</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
+          <dev:defaultValue>$env:windir\SoftwareDistribution\ReportingEvents.log</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -507,14 +513,14 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>EventsPath</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill EventsPath Description }}</maml:para>
+          <maml:para>The path to a ReportingEvents file. Defaults to  $env:windir\SoftwareDistribution\ReportingEvents.log</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
+        <dev:defaultValue>$env:windir\SoftwareDistribution\ReportingEvents.log</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes>
@@ -545,9 +551,9 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $ReportingEvents = Import-ReportingEvents</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>In this example the ReportingEvents log file is imported into the $ReportingEvents variable.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

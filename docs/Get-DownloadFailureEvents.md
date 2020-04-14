@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-DownloadFailureEvents
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Returns failed Download events from a ReportingEvents 
+collection.
 
 ## SYNTAX
 
@@ -17,21 +18,25 @@ Get-DownloadFailureEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Returns failed Detection events (event ID 1) from a ReportingEvents 
+collection.
+
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReportingEvents = Import-ReportingEvents
+PS C:\> Get-DownloadFailureEvents -ReportingEvents $ReportingEvents
 ```
 
-{{ Add example description here }}
+In this example the ReportingEvents.log file is imported, then the failed 
+Download events are returned.
 
 ## PARAMETERS
 
 ### -ReportingEvents
-{{ Fill ReportingEvents Description }}
+A collection of ReportingEvents.
 
 ```yaml
 Type: Object

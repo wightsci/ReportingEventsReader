@@ -8,7 +8,7 @@ schema: 2.0.0
 # Import-ReportingEvents
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Imports a ReportingEvents log file.
 
 ## SYNTAX
 
@@ -17,21 +17,23 @@ Import-ReportingEvents [[-EventsPath] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Imports a ReportingEvents log file.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReportingEvents = Import-ReportingEvents
 ```
 
-{{ Add example description here }}
+In this example the ReportingEvents log file is imported into the
+$ReportingEvents variable.
 
 ## PARAMETERS
 
 ### -EventsPath
-{{ Fill EventsPath Description }}
+The path to a ReportingEvents file. Defaults to 
+$env:windir\SoftwareDistribution\ReportingEvents.log
 
 ```yaml
 Type: String
@@ -40,7 +42,7 @@ Aliases:
 
 Required: False
 Position: 0
-Default value: None
+Default value: $env:windir\SoftwareDistribution\ReportingEvents.log
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

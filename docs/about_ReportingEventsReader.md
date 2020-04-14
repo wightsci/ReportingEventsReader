@@ -17,7 +17,9 @@ The second header should have no spaces.
 ```
 
 # SHORT DESCRIPTION
-{{ Short Description Placeholder }}
+The ReportingEventReader module gives access to the events stored in the
+ReportingEvents log file, which is located in the \Windows\SoftwareDistribution
+folder.
 
 ```
 ABOUT TOPIC NOTE:
