@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- powershell: Install-Module Pester -Force -Scope CurrentUser
+  displayName: Update Pester
+  name: prepStep
+  workingDirectory: $(build.sourcesDirectory)
+  failOnStderr: 'true'
+- powershell: Invoke-Pester
+  displayName: Pester Tests
+  name: firstStep
+  workingDirectory: $(build.sourcesDirectory)
+  failOnStderr: 'true'
