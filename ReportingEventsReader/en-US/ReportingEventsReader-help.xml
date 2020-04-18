@@ -175,7 +175,7 @@ PS C:\&gt; Get-DetectionFailureEvents -ReportingEvents $ReportingEvents</dev:cod
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-DownloadEvents</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
             <maml:para>A collection of ReportingEvents.</maml:para>
@@ -190,7 +190,7 @@ PS C:\&gt; Get-DetectionFailureEvents -ReportingEvents $ReportingEvents</dev:cod
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
           <maml:para>A collection of ReportingEvents.</maml:para>
@@ -255,7 +255,7 @@ PS C:\&gt; Get-DownloadEvents -ReportingEvents $ReportingEvents</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-DownloadFailureEvents</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
             <maml:para>A collection of ReportingEvents.</maml:para>
@@ -270,7 +270,7 @@ PS C:\&gt; Get-DownloadEvents -ReportingEvents $ReportingEvents</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
           <maml:para>A collection of ReportingEvents.</maml:para>
@@ -322,6 +322,236 @@ PS C:\&gt; Get-DownloadFailureEvents -ReportingEvents $ReportingEvents</dev:code
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
+      <command:name>Get-EventsForTimeSpan</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>EventsForTimeSpan</command:noun>
+      <maml:description>
+        <maml:para>Returns events that occur between DateTimes from a ReportingEvents  collection.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Returns events that occur between DateTimes from a ReportingEvents  collection.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-EventsForTimeSpan</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Start</maml:name>
+          <maml:Description>
+            <maml:para>The start DateTime for the search.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+          <dev:type>
+            <maml:name>DateTime</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>End</maml:name>
+          <maml:Description>
+            <maml:para>The end DateTime for the search.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+          <dev:type>
+            <maml:name>DateTime</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>ReportingEvents</maml:name>
+          <maml:Description>
+            <maml:para>A collection of reporting events, as returned by Import-ReportingEvents .</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>End</maml:name>
+        <maml:Description>
+          <maml:para>The end DateTime for the search.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+        <dev:type>
+          <maml:name>DateTime</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>ReportingEvents</maml:name>
+        <maml:Description>
+          <maml:para>A collection of reporting events, as returned by Import-ReportingEvents .</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <dev:type>
+          <maml:name>Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Start</maml:name>
+        <maml:Description>
+          <maml:para>The start DateTime for the search.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+        <dev:type>
+          <maml:name>DateTime</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>Reporting event time stamps have a time resolution to milliseconds. If not specified, the milliseconds of a DateTime object will be 000. Bear this in mind when constructing DateTime objects for the -End parameter. You probably want 999 as your milliseconds.</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-EventsForTimeSpan -ReportingEvents $RE -start (Get-Date '20/03/2020 17:49:11') -end (Get-Date '20/03/2020 17:49:12.999')</dev:code>
+        <dev:remarks>
+          <maml:para>In this example reporting events tht occurred between the supplied dates and times are returned.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-EventsForUpdate</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>EventsForUpdate</command:noun>
+      <maml:description>
+        <maml:para>Returns events for a specific update from a ReportingEvents  collection.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Returns events for a specific update from a ReportingEvents  collection. The function applies a wildcard to any text provided to the -UpdateName parameter.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-EventsForUpdate</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>UpdateName</maml:name>
+          <maml:Description>
+            <maml:para>Textual name of the update to search for.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ReportingEvents</maml:name>
+          <maml:Description>
+            <maml:para>A collection of reporting events, as returned by Import-ReportingEvents .</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>ReportingEvents</maml:name>
+        <maml:Description>
+          <maml:para>A collection of reporting events, as returned by Import-ReportingEvents .</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <dev:type>
+          <maml:name>Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>UpdateName</maml:name>
+        <maml:Description>
+          <maml:para>Textual name of the update to search for.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-EventsForUpdate -UpdateName onenote -ReportingEvents $RE</dev:code>
+        <dev:remarks>
+          <maml:para>In this example all reporting events for OneNote are returned.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
       <command:name>Get-InstallEvents</command:name>
       <command:verb>Get</command:verb>
       <command:noun>InstallEvents</command:noun>
@@ -335,7 +565,7 @@ PS C:\&gt; Get-DownloadFailureEvents -ReportingEvents $ReportingEvents</dev:code
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-InstallEvents</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
             <maml:para>A collection of ReportingEvents.</maml:para>
@@ -350,7 +580,7 @@ PS C:\&gt; Get-DownloadFailureEvents -ReportingEvents $ReportingEvents</dev:code
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
           <maml:para>A collection of ReportingEvents.</maml:para>
@@ -415,7 +645,7 @@ PS C:\&gt; Get-InstallEvents -ReportingEvents $ReportingEvents</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-InstallFailureEvents</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ReportingEvents</maml:name>
           <maml:Description>
             <maml:para>A collection of ReportingEvents.</maml:para>
@@ -430,7 +660,7 @@ PS C:\&gt; Get-InstallEvents -ReportingEvents $ReportingEvents</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>ReportingEvents</maml:name>
         <maml:Description>
           <maml:para>A collection of ReportingEvents.</maml:para>
