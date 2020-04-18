@@ -21,7 +21,6 @@ Get-DetectionFailureEvents [-ReportingEvents] <Object> [<CommonParameters>]
 Returns failed Detection events (event ID 148) from a ReportingEvents 
 collection.
 
-
 ## EXAMPLES
 
 ### Example 1

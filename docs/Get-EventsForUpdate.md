@@ -5,40 +5,54 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-DownloadFailureEvents
+# Get-EventsForUpdate
 
 ## SYNOPSIS
-Returns failed Download events from a ReportingEvents 
+Returns events for a specific update from a ReportingEvents 
 collection.
 
 ## SYNTAX
 
 ```
-Get-DownloadFailureEvents [-ReportingEvents] <Object> [<CommonParameters>]
+Get-EventsForUpdate [-UpdateName] <String> [-ReportingEvents] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns failed Detection events (event ID 1) from a ReportingEvents 
-collection.
+Returns events for a specific update from a ReportingEvents 
+collection. The function applies a wildcard to any text provided to the -UpdateName parameter.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $ReportingEvents = Import-ReportingEvents
-PS C:\> Get-DownloadFailureEvents -ReportingEvents $ReportingEvents
+PS C:\> Get-EventsForUpdate -UpdateName onenote -ReportingEvents $RE
+
 ```
 
-In this example the ReportingEvents.log file is imported, then the failed 
-Download events are returned.
+In this example all reporting events for OneNote are returned.
 
 ## PARAMETERS
 
 ### -ReportingEvents
-A collection of ReportingEvents.
+A collection of reporting events, as returned by Import-ReportingEvents .
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateName
+Textual name of the update to search for.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

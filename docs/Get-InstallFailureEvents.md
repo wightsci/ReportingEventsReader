@@ -14,7 +14,7 @@ collection.
 ## SYNTAX
 
 ```
-Get-InstallFailureEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
+Get-InstallFailureEvents [-ReportingEvents] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,6 +22,7 @@ Returns failed Install events (event IDs 182,195,198,203) from a ReportingEvents
 collection.
 
 ## EXAMPLES
+
 ### Example 1
 ```powershell
 PS C:\> $ReportingEvents = Import-ReportingEvents
@@ -41,7 +42,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False

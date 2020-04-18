@@ -14,7 +14,7 @@ collection.
 ## SYNTAX
 
 ```
-Get-InstallEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
+Get-InstallEvents [-ReportingEvents] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False

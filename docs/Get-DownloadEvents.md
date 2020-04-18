@@ -13,7 +13,7 @@ Returns successful Download events from a ReportingEvents collection.
 ## SYNTAX
 
 ```
-Get-DownloadEvents [[-ReportingEvents] <Object>] [<CommonParameters>]
+Get-DownloadEvents [-ReportingEvents] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
